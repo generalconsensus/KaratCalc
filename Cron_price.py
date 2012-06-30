@@ -10,7 +10,7 @@ def get_price (curr):
  now=time.time()
 
  try:
-  con = mdb.connect('localhost', 'jmat_goldview', 'k5o63RAGQ6cbimUgtLmc', 'jmat_gold_history');
+  con = mdb.connect('localhost', '', '', '');
   cur = con.cursor()
   Sql="SELECT price,Unix_Timestamp(lastdate),browser,ip from details order by lastdate DESC LIMIT 1"
   cur.execute(Sql)
